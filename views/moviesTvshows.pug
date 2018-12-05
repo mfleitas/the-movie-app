@@ -6,7 +6,7 @@ block content
       .wrapper
           each movie in movies 
             div.box
-              a.box__link(href="http://localhost:4000/movie-details/" + movie.imdbID)
+              a.box__link(href="/movie-details/" + movie.imdbID)
                 img.box-img(src=movie.Poster)
                 h2.box-title.mt-4=movie.Title
                 h4.list-inline.p-4=movie.Rated

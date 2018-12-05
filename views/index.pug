@@ -27,32 +27,32 @@ body.bg-black
     nav.navbar.navbar--black
       .navbar__row
         .logo__wrapper 
-          a.nav__link(href='http://localhost:4000')
+          a.nav__link(href='/')
             img.navbar__logo-img(src='images/logo.png')
         ul.navbar__nav.list-unstyled
           
             li.nav__item
-              a.nav__link(href='http://localhost:4000') Home
+              a.nav__link(href='/') Home
               
             li.nav__item.dropbtn-home
               a.nav__link(href='#') Movies
               ul.submenu.list-unstyled
                 li.nav__item
-                  a.nav__link(href="http://localhost:4000/movie/popular") Popular
+                  a.nav__link(href="/movie/popular") Popular
                 li.nav__item
-                  a.nav__link(href="http://localhost:4000/movie/top_rated") Top Rated
+                  a.nav__link(href="/movie/top_rated") Top Rated
                 li.nav__item
-                  a.nav__link(href="http://localhost:4000/movie/now_playing") Now Playing
+                  a.nav__link(href="/movie/now_playing") Now Playing
 
             li.nav__item.dropbtn-home
               a.nav__link(href='#') TV Shows
               ul.submenu.list-unstyled
                 li.nav__item
-                  a.nav__link(href="http://localhost:4000/tv/popular") Popular
+                  a.nav__link(href="/tv/popular") Popular
                 li.nav__item
-                  a.nav__link(href="http://localhost:4000/tv/top_rated") Top Rated
+                  a.nav__link(href="/tv/top_rated") Top Rated
                 li.nav__item
-                  a.nav__link(href="http://localhost:4000/tv/on_the_air") On TV
+                  a.nav__link(href="/tv/on_the_air") On TV
             li
               form#searchForm.nav__search-form
                 input#txtSearch.input__search(type='text',placeholder='Search Movie, TV Shows, or People ...')

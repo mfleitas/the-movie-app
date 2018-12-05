@@ -92,7 +92,7 @@ app.use(express.static(__dirname + '/public'));
 //     })
 // });
 
-// Route to search movie by id or title. request -> http://localhost:4000/id?it=tt0100405
+// Route to search movie by id or title. request -> /id?it=tt0100405
 app.get('/id', (req, res) => {
     // get http://www.omdbapi.com/?apikey=ff8e8da0
     const url = `http://www.omdbapi.com/?apikey=ff8e8da0&i=${req.query.it}`;
@@ -105,7 +105,7 @@ app.get('/id', (req, res) => {
     })
 });
 
-// search movie by year of release.     request -> http://localhost:4000/year?y=2018 does not work, also needs the title or id
+// search movie by year of release.     request -> /year?y=2018 does not work, also needs the title or id
 app.get('/year', (req, res) => {
     // get http://www.omdbapi.com/?apikey=ff8e8da0
     const url = `http://www.omdbapi.com/?apikey=ff8e8da0&y=${req.query.y}`;

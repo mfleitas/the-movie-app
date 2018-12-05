@@ -15,7 +15,7 @@ $(document).ready(function() {
     $('#searchForm').on('submit', (e) => {
         e.preventDefault();
         const textSearch = $('#txtSearch').val();
-        const url = 'http://localhost:4000/search/multi?query=' + textSearch;
+        const url = '/search/multi?query=' + textSearch;
         window.location.href = url;
     });
 });
@@ -24,6 +24,6 @@ function handleClickEvent(ev) {
     ev.preventDefault();
     
     const page = $(ev.target).attr('data-value');
-    // window.location.href = 'http://localhost:4000/movie/popular?page=' + page;
+    // window.location.href = '/movie/popular?page=' + page;
     window.location.href = `${location.origin}${location.pathname}?page=${page}`;
 }
