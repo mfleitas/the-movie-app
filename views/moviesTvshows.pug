@@ -1,0 +1,24 @@
+extends layout
+block content
+  .main-content
+    .container
+      h1.text-capitalize=info.category
+      .wrapper
+          each movie in movies 
+            div.box
+              a.box__link(href="http://localhost:4000/movie-details/" + movie.imdbID)
+                img.box-img(src=movie.Poster)
+                h2.box-title.mt-4=movie.Title
+                h4.list-inline.p-4=movie.Rated
+                h4.list-inline.p-4 |
+                h4.list-inline.p-4=movie.Runtime
+  .container.text-center(style="padding-bottom: 25px;")
+    .pagination#pagination
+        a.pagination-link(href="#", data-value=info.paginationData.paginationStart - 1) &laquo;
+        - for(let index=info.paginationData.paginationStart; index < info.paginationData.paginationEnd; index++)
+          if index == info.paginationData.page
+            a.pagination-link.pagination-link-active(href="#", data-value=index) #{index}
+          else
+            a.pagination-link(href="#", data-value=index) #{index}
+        a.pagination-link(href="#", data-value=info.paginationData.paginationEnd) &raquo;        
+  

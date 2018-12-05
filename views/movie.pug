@@ -1,0 +1,42 @@
+extends layout.pug
+
+block content 
+  .main-content
+    .container
+      .row
+        .content-left
+          img(src=movie.Poster, alt="")
+        .content-right
+          h1.margin-bottom-5 #{movie.Title} (#{movie.Year})
+          .movie-subdescription
+            p.text-grey 
+              strong #{movie.Rated} | #{movie.Runtime}
+            p.text-grey
+              b Released date: 
+              =movie.Released
+            p.text-grey 
+              b Genre: 
+              =movie.Genre
+            p.text-grey 
+              b Actors: 
+              =movie.Actors
+            p.text-grey 
+              b Writer: 
+              =movie.Writer
+            p.text-grey 
+              b Language: 
+              =movie.Language
+            p.text-grey 
+              b imdb rating: 
+              i.fa.fa-star.movie-rating
+                =movie.imdbRating
+            p.text-grey.margin-bottom-5 
+              b Plot Summary: 
+              =movie.Plot
+
+            
+              
+            
+              
+  
+  

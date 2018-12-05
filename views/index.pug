@@ -1,0 +1,93 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  title Movie Library | Welcome
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='js/slider.js')
+  script(src='js/main.js')
+  link(rel="stylesheet", href="CSS/styles.css")
+  link(rel='stylesheet', href='Sources/CSS/webfonts/AbrilFatface/stylesheet.css')
+  link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+body.bg-black
+  header.header__wrapper
+    div.slides
+      -for(var i=0;i<10;i++)
+        .slide.slide--fade
+          img.slide__image(src="http://image.tmdb.org/t/p/original"+results[i].backdrop_path)
+          .container-full.container-overlay
+            .container.text-center
+              h1.title.title--large=results[i].title
+              p.ad-subtitle=results[i].overview
+      
+    
+    nav.navbar.navbar--black
+      .navbar__row
+        .logo__wrapper 
+          a.nav__link(href='http://localhost:4000')
+            img.navbar__logo-img(src='images/logo.png')
+        ul.navbar__nav.list-unstyled
+          
+            li.nav__item
+              a.nav__link(href='http://localhost:4000') Home
+              
+            li.nav__item.dropbtn-home
+              a.nav__link(href='#') Movies
+              ul.submenu.list-unstyled
+                li.nav__item
+                  a.nav__link(href="http://localhost:4000/movie/popular") Popular
+                li.nav__item
+                  a.nav__link(href="http://localhost:4000/movie/top_rated") Top Rated
+                li.nav__item
+                  a.nav__link(href="http://localhost:4000/movie/now_playing") Now Playing
+
+            li.nav__item.dropbtn-home
+              a.nav__link(href='#') TV Shows
+              ul.submenu.list-unstyled
+                li.nav__item
+                  a.nav__link(href="http://localhost:4000/tv/popular") Popular
+                li.nav__item
+                  a.nav__link(href="http://localhost:4000/tv/top_rated") Top Rated
+                li.nav__item
+                  a.nav__link(href="http://localhost:4000/tv/on_the_air") On TV
+            li
+              form#searchForm.nav__search-form
+                input#txtSearch.input__search(type='text',placeholder='Search Movie, TV Shows, or People ...')
+                button#btnSubmit.search__submit(type='submit')
+                  i.material-icons(style='margin-top: 4px') search
+                  
+                    
+  footer.footer-top(style='margint-top: -4px')
+    
+      ul.nav-social
+        li.social-item
+          a.social-link(href='mailto:email@website.com')
+            i.fa.fa-envelope
+        li.social-item
+          a.social-link(href='https://www.facebook.com/')
+            i.fa.fa-facebook
+        li.social-item
+          a.social-link(href='https:plus.google.com')
+            i.fa.fa-google-plus
+        li.social-item
+          a.social-link(href='https://www.twitter.com')
+            i.fa.fa-twitter
+        li.social-item
+          a.social-link(href='https://www.youtube.com')
+            i.fa.fa-youtube
+      p.design-description Designed by: Maykel Fleitas
+
+    
+      //- p.copy-right &copy; GOMOVIE 2018
+
+
+        
+
+        
+
+
+  //- Slideshow http://www.slidesjs.com/
+  //- jssor.com/demos/carousel-slider.slider
